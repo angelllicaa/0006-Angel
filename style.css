@@ -1,0 +1,64 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 100%;
+}
+
+header {
+    background: orangered;
+    height: 120px;
+}
+
+.nav {
+    background: rgb(233, 236, 28);
+    height: 80px;
+}
+
+.footer {
+    background: rgb(132, 144, 214);
+    height: 120px;
+}
+
+.main {
+    background: rgb(216, 117, 87);
+    height: 300px;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.aside1 {
+    background: rgb(112, 11, 45);
+}
+
+/* tampilan rtesponsive */
+@media all and (min-width: 800px){
+    .main {
+        flex: 2;
+    }
+    .aside1 {
+        order: 2;
+    }
+    .main {
+        order: 1;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px){
+    .aside1 {
+        flex: 1;
+    }
+}
